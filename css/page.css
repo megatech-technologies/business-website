@@ -1,0 +1,457 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  color: #eaeaea;
+  font-family: "Segoe UI", Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #000;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a,
+.dropdown button {
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+nav a:hover,
+.dropdown button:hover {
+  color: #a30000;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown .menu {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background: #1a1a1a;
+  min-width: 200px;
+  display: none;
+  flex-direction: column;
+  border-radius: 6px;
+  z-index: 999;
+}
+
+.dropdown.active .menu {
+  display: flex;
+}
+
+.dropdown .menu a {
+  padding: 10px 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown .menu a:hover {
+  background: #7b0000;
+}
+
+/* MAIN CONTENT */
+section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+.mail {
+  text-decoration: none;
+  color: aqua;
+}
+
+h1 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+p {
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* FORM (CONTACT PAGE READY) */
+form {
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #000;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+button {
+  background: #7b0000;
+  border: none;
+  padding: 12px;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #a30000;
+}
+
+/* =========================
+   COURSE CARD GRID SYSTEM
+   ========================= */
+
+/* The Grid Container */
+.courses-grid {
+  display: grid;
+  /* Creates two equal columns */
+  grid-template-columns: repeat(2, 1fr);
+  /* Spacing between cards */
+  gap: 25px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+/* The Individual Card */
+.course-card {
+  /* Matches your form input styling */
+  background: #000;
+  border: 1px solid #333;
+  border-radius: 6px; /* Matches dropdown rounded corners */
+  overflow: hidden; /* Ensures image stays within rounded corners */
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover effect for the card */
+.course-card:hover {
+  border-color: #7b0000; /* Your theme's dark red */
+  transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Card Image Container */
+.card-image {
+  width: 100%;
+  height: 400px; /* Fixed height for uniformity */
+  background: #1a1a1a; /* Placeholder color while loading */
+}
+
+/* The actual image tag */
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers area without distorting */
+  display: block;
+}
+
+/* Card Content Area */
+.card-content {
+  padding: 20px;
+  flex-grow: 1; /* Ensures content fills space if card heights differ */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Course Title */
+.card-title {
+  margin: 0 0 12px 0;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.course-card:hover .card-title {
+   color: #a30000; /* Brighter red on hover, optional */
+   transition: color 0.3s ease;
+}
+
+/* Course Summary Text Container */
+.card-summary {
+  /* The div will naturally expand vertically as text is added */
+  flex-grow: 1;
+}
+
+/* Ensuring card text uses your global p styling */
+.card-summary p {
+  margin-bottom: 10px;
+}
+.card-summary p:last-child {
+  margin-bottom: 0;
+}
+
+/* Ensure the content area pushes the button to the bottom */
+.card-content {
+  padding: 20px;
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The summary container */
+.card-summary {
+  flex-grow: 1; /* This pushes the button down */
+  margin-bottom: 20px;
+}
+
+/* Learn More Button Style */
+.card-btn {
+  background: #7b0000; /* Your specific red */
+  border: 1px solid transparent;
+  padding: 12px;
+  color: #fff;
+  cursor: pointer;
+  width: 100%; /* Full width looks more modern in cards */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+/* Hover State */
+.card-btn:hover {
+  background: #a30000; /* Brighter red on hover */
+  color: #fff; /* Keeping text white for contrast */
+  border-color: #fff; /* Subtle border pop */
+}
+
+/* Link Style (In case you use <a> instead of <button>) */
+a.card-btn {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+/*for chromebook profile*/
+.course-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   ARTICLE NEXT / PREVIOUS
+   ========================= */
+
+.article-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.article-link {
+  background: #7b0000;
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.article-link:hover {
+  background: #a30000;
+  border-color: #fff;
+}
+
+/* Left & Right alignment */
+
+.article-link.prev {
+  text-align: left;
+}
+
+.article-link.next {
+  text-align: right;
+}
+
+/* themes */
+
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+  main {
+    padding: 30px 15px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  nav {
+    justify-content: center;
+  }
+
+  .dropdown .menu {
+    position: static;
+    margin-top: 5px;
+  }
+
+  main {
+    padding: 25px 15px;
+  }
+
+  CSS
+/* =========================
+   COURSE CARD GRID SYSTEM
+   ========================= */
+
+/* The Grid Container */
+.courses-grid {
+  display: grid;
+  /* Creates two equal columns */
+  grid-template-columns: repeat(2, 1fr);
+  /* Spacing between cards */
+  gap: 25px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+/* The Individual Card */
+.course-card {
+  /* Matches your form input styling */
+  background: #000;
+  border: 1px solid #333;
+  border-radius: 6px; /* Matches dropdown rounded corners */
+  overflow: hidden; /* Ensures image stays within rounded corners */
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover effect for the card */
+.course-card:hover {
+  border-color: #7b0000; /* Your theme's dark red */
+  transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Card Image Container */
+.card-image {
+  width: 100%;
+  height: 260px; /* Fixed height for uniformity */
+  background: #1a1a1a; /* Placeholder color while loading */
+}
+
+/* The actual image tag */
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers area without distorting */
+  display: block;
+}
+
+/* Card Content Area */
+.card-content {
+  padding: 20px;
+  flex-grow: 1; /* Ensures content fills space if card heights differ */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Course Title */
+.card-title {
+  margin: 0 0 12px 0;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.course-card:hover .card-title {
+   color: #a30000; /* Brighter red on hover, optional */
+   transition: color 0.3s ease;
+}
+
+/* Course Summary Text Container */
+.card-summary {
+  /* The div will naturally expand vertically as text is added */
+  flex-grow: 1;
+}
+
+/* Ensuring card text uses your global p styling */
+.card-summary p {
+  margin-bottom: 10px;
+}
+.card-summary p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   RESPONSIVENESS ADDITIONS
+   ========================= */
+
+/* Add to existing Tablet Media Query if needed,
+   but 2x2 usually works okay on tablets. */
+
+/* MOBILE VIEW ADJUSTMENT */
+/* Find your existing @media (max-width: 768px) block and add this inside it: */
+
+
+  /* Switch grid to 1 column on mobile devices */
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card-image {
+    height: 180px; /* Slightly shorter images on mobile */
+  }
+  /* chromebook progile responsive */
+  .course-profile-img {
+    object-position: center;
+  }
+
+  /*next & preveous page*/
+  
+
+  .article-link {
+    text-align: center;
+    width: 50%;
+  }
+
+  .article-link {
+  padding: 13px 4px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+}

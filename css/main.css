@@ -1,0 +1,389 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b0f1a;
+  color: #ffffff;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 28px;
+  background: #020617;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 15px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* NAV LINKS */
+nav > a,
+.dropdown > button {
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 6px 0;
+  position: relative;
+}
+
+/* REMOVE RED BLOCK / FOCUS BACKGROUND */
+nav > a:focus,
+nav > a:active,
+.dropdown > button:focus,
+.dropdown > button:active {
+  outline: none;
+  background: none;
+}
+
+/* HOVER EFFECT (TEXT SAFE) */
+nav > a:hover,
+.dropdown > button:hover {
+  color: #38bdf8;
+}
+
+nav > a::after,
+.dropdown > button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+nav > a:hover::after,
+.dropdown > button:hover::after {
+  width: 100%;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown {
+  position: relative;
+}
+
+/* SUBMENU — ABSOLUTE ALWAYS */
+.menu {
+  position: absolute;
+  top: 130%;
+  left: 0;
+
+  min-width: 220px;
+  background: #020617;
+  border-radius: 10px;
+  padding: 10px 0;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  z-index: 999;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+}
+
+/* SHOW MENU */
+.dropdown.active .menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* SUBMENU LINKS */
+.menu a {
+  display: block;
+  padding: 10px 18px;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu a:hover {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* FANCY PROFILE */
+.profile {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 4px solid rgba(56, 189, 248, 0.6);
+  box-shadow:
+    0 0 30px rgba(56, 189, 248, 0.6),
+    0 0 80px rgba(56, 189, 248, 0.25);
+
+  margin-bottom: 25px;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+
+/* LIGHT MODE OVERRIDES */
+body.light {
+  background: #f5f7fa;
+  color: #111;
+}
+
+body.light nav,
+body.light .navbar {
+  background: #ffffff;
+}
+
+body.light .course-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+}
+
+body.light .card-content {
+  background: #ffffff;
+}
+
+body.light a,
+body.light p,
+body.light h1,
+body.light h2,
+body.light h3,
+body.light h4,
+body.light li {
+  color: #111;
+}
+
+
+
+body.light .article-link:hover {
+  color: #fff !important;
+}
+
+
+body.light p {
+  color: #222;
+}
+
+body.light .card-btn,
+body.light .article-link,
+body.light .cta {
+  color: #fff !important;
+}
+
+
+
+body.light .card-btn {
+  background: #2563eb;
+  color: #fff;
+}
+
+
+/* Fix navbar links + Services / Courses button */
+body.light nav > a,
+body.light .dropdown > button {
+  color: #111;
+}
+
+/* Fix navbar hover */
+body.light nav > a:hover,
+body.light .dropdown > button:hover {
+  color: #2563eb;
+}
+
+/* Fix dropdown background (Pages / Services menu) */
+body.light .menu {
+  background: #ffffff;
+  border: 1px solid #ddd;
+}
+
+/* Fix dropdown text */
+body.light .menu a {
+  color: #111;
+}
+
+/* Fix dropdown hover */
+body.light .menu a:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+}
+
+/*whatsapp*/
+.whatsapp-line {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.whatsapp-line i {
+  color: #25D366;
+  margin-right: 6px;
+}
+
+.whatsapp-link {
+  color: #25D366;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.whatsapp-link:hover {
+  text-decoration: underline;
+}
+
+/* article button*/
+.article-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.article-link {
+  background: #38bdf8;
+  color: #020617;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.article-link:hover {
+  background: #0ea5e9;
+  border-color: #fff;
+}
+
+/* Left & Right alignment */
+
+.article-link.prev {
+  text-align: left;
+}
+
+.article-link.next {
+  text-align: right;
+}
+
+
+
+/* PROFILE ANIMATION */
+@keyframes pulse {
+  0% {
+    box-shadow:
+      0 0 25px rgba(56, 189, 248, 0.6),
+      0 0 60px rgba(56, 189, 248, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 45px rgba(56, 189, 248, 0.9),
+      0 0 100px rgba(56, 189, 248, 0.35);
+  }
+  100% {
+    box-shadow:
+      0 0 25px rgba(56, 189, 248, 0.6),
+      0 0 60px rgba(56, 189, 248, 0.2);
+  }
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  opacity: 0.85;
+  margin-bottom: 26px;
+}
+
+/* CTA */
+.cta {
+  padding: 14px 36px;
+  background: #38bdf8;
+  color: #020617;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.cta:hover {
+  background: #0ea5e9;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .profile {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* KEEP DROPDOWNS ABSOLUTE ON MOBILE */
+  .menu {
+    left: 0;
+    right: auto;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+}
