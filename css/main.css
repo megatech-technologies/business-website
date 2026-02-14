@@ -348,6 +348,13 @@ body.light .menu a:hover {
   background: #0ea5e9;
 }
 
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
   nav {
