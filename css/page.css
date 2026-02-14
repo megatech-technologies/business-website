@@ -142,7 +142,6 @@ button:hover {
 .courses-grid {
   display: grid;
   /* Creates two equal columns */
-  grid-template-columns: repeat(2, 1fr);
   /* Spacing between cards */
   gap: 25px;
   margin-top: 30px;
@@ -339,7 +338,6 @@ a.card-btn {
 .courses-grid {
   display: grid;
   /* Creates two equal columns */
-  grid-template-columns: repeat(2, 1fr);
   /* Spacing between cards */
   gap: 25px;
   margin-top: 30px;
