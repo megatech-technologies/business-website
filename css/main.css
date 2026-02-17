@@ -302,6 +302,12 @@ body.light .menu a:hover {
   text-align: right;
 }
 
+.card-image video {
+  max-height: 260px;
+  width: 100%;
+  object-fit: contain;
+  background: #000;
+}
 
 
 /* PROFILE ANIMATION */
@@ -446,7 +452,7 @@ body.light .menu a:hover {
 
   /* CARD IMAGE MOBILE */
   .card-image {
-    height: 180px;
+    height: auto;
   }
 
   /* ARTICLE BUTTONS */
