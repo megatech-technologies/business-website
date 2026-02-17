@@ -360,6 +360,70 @@ body.light .menu a:hover {
   gap: 25px;
 }
 
+/* MAIN CARD */
+.course-card {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background: #020617;
+  padding: 25px;
+  border-radius: 14px;
+}
+
+/* IMAGE CONTAINER */
+.card-image {
+  width: 100%;
+  text-align: center;
+}
+
+/* IMAGE ITSELF */
+.card-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+/* TEXT CONTENT */
+.card-content {
+  width: 100%;
+}
+
+/* TITLES */
+.card-title {
+  margin-bottom: 15px;
+}
+
+/* PARAGRAPH SPACING */
+.card-summary p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* FORCE IMAGE + VIDEO STACKING */
+
+.card-image {
+  display: block;
+  margin-bottom: 25px;
+}
+
+/* VIDEO FIX */
+
+.card-image video {
+  width: 100%;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* SECOND IMAGE SPACING */
+
+.card-image img {
+  display: block;
+  margin-bottom: 30px;
+}
+
+
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {

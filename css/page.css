@@ -167,11 +167,26 @@ button:hover {
 }
 
 /* Card Image Container */
+
 .card-image {
   width: 100%;
-  height: 400px; /* Fixed height for uniformity */
-  background: #1a1a1a; /* Placeholder color while loading */
+  height: auto;
+  background: #1a1a1a;
+  margin-bottom: 25px;
 }
+
+.card-image video {
+  width: 100%;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.card-image img {
+  display: block;
+  margin-bottom: 30px;
+}
+
 
 /* The actual image tag */
 .card-image img {
@@ -357,11 +372,7 @@ a.card-btn {
 }
 
 /* Card Image Container */
-.card-image {
-  width: 100%;
-  height: 260px; /* Fixed height for uniformity */
-  background: #1a1a1a; /* Placeholder color while loading */
-}
+
 
 /* The actual image tag */
 .card-image img {
