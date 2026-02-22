@@ -338,7 +338,10 @@ a.card-btn {
     padding: 25px 15px;
   }
 
-  
+  .article-nav {
+  flex-direction: column;
+  align-items: center;
+}
 /* =========================
    COURSE CARD GRID SYSTEM
    ========================= */
@@ -446,7 +449,8 @@ a.card-btn {
 
   .article-link {
     text-align: center;
-    width: 50%;
+    width: 100%;
+    letter-spacing: 0.2; /*normal or 0 */
   }
 
   .article-link {
