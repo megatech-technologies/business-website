@@ -56,4 +56,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+  const images = document.querySelectorAll(".album-item img");
+  const preview = document.getElementById("imagePreview");
+  const previewImg = document.getElementById("previewImg");
+  const closeBtn = document.querySelector(".close-preview");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      preview.classList.add("active");
+      previewImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    preview.classList.remove("active");
+  });
+
+  preview.addEventListener("click", (e) => {
+    if (e.target === preview) {
+      preview.classList.remove("active");
+    }
+  });
 

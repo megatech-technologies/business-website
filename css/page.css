@@ -138,15 +138,7 @@ button:hover {
    COURSE CARD GRID SYSTEM
    ========================= */
 
-/* The Grid Container */
-.courses-grid {
-  display: grid;
-  /* Creates two equal columns */
-  /* Spacing between cards */
-  gap: 25px;
-  margin-top: 30px;
-  margin-bottom: 40px;
-}
+
 
 /* The Individual Card */
 .course-card {
@@ -342,19 +334,7 @@ a.card-btn {
   flex-direction: column;
   align-items: center;
 }
-/* =========================
-   COURSE CARD GRID SYSTEM
-   ========================= */
 
-/* The Grid Container */
-.courses-grid {
-  display: grid;
-  /* Creates two equal columns */
-  /* Spacing between cards */
-  gap: 25px;
-  margin-top: 30px;
-  margin-bottom: 40px;
-}
 
 /* The Individual Card */
 .course-card {
@@ -432,11 +412,7 @@ a.card-btn {
 /* Find your existing @media (max-width: 768px) block and add this inside it: */
 
 
-  /* Switch grid to 1 column on mobile devices */
-  .courses-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+  
 
   
   /* chromebook progile responsive */
